@@ -1,191 +1,81 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body
-{
-    background-color: rgb(184, 247, 120);
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+  padding: 1rem;
 }
 
-
-
-.conTainer
-{
-    width: 98%;
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.6);
-    background-color: rgb(171, 191, 152);
-    margin: 10px auto;
-}
-  
-.navBar{
-    background-color: hsl(133, 100%, 50%);
-    width: 98%;
-    height: 70px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 30px;
-    padding: 20px;
-
-
+header {
+  text-align: center;
+  padding: 1rem;
+  background: #004c97;
+  color: white;
 }
 
-
-.navBar
-{
-    background-color: rgb(66, 133, 4);
-    width: 100%;
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 20px;
-    padding: 20px;
-
-}
- 
-.navBar .logo img
-{
-    width: 70px;
-    height: 85px;
+h1, h2 {
+  margin-bottom: 0.5rem;
 }
 
-.navBar .mainMenu
-{
-    display: flex;
+main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
 
+/* CSS Grid is a layout system that lets you arrange elements into rows and columns easily. */
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
 }
 
 
-.navBar .mainMenu li
-{
-    list-style: none;
-}
-.navBar .mainMenu li a
-{
-    text-decoration: none;
-    margin-left: 30px;
-    font-size: 16px;
-    font-weight: 700px;
-    color: whitesmoke;
-    cursor: pointer;
+/* Use grid layout.
+
+Automatically fit as many columns as possible (auto-fit) with each column being at least 250px wide (minmax(250px, 1fr)).
+
+If there's more space, let them expand equally (1fr).
+
+Add gaps of 1.5rem between items. */
+
+
+article {
+  background: white;
+  padding: 1.5rem;
+  border-left: 5px solid #004c97;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
 }
 
-.navBar .OrderMe button
-{
-    padding: 10px 30px;
-    border: none;
-    background-color: rgb(128, 243, 13);
-    box-shadow: 3px 3px 4px rgba(59, 1, 1, 0.6);
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: 600;
-}
-.navBar .OrderMe button:hover{
-    background-color: chartreuse;
-    transform: scale(1.05);
-    transition: all 0.3s ease-in-out;
+article:hover {
+  transform: translateY(-5px);
 }
 
-.heroSection
-{
-    background: url("../images/Plant_Collections/grass3.png");
-    width: 100%;
-    height: 60vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.heroSection h1
-{
-    text-align: center;
-    font-family: cursive;
-    font-size: 50px;
-    text-shadow: 3px 3px 4px rgba(19, 118, 19, 0.5);
-    color: rgb(133, 238, 137);
-
-}
-.heroSection h1 span
-{
-    color: rgb(8, 96, 28);
-}
-.headText h1
-{
-    text-align: center;
-    color: green;
-    text-shadow: 4px 4px 6px rgba(0,0,0,0.6);
-    margin-top: 30px;
-    font-family: cursive;
-    font-size: 60px;
-    
-
-    
-}
-.aboutplants
-{
-    width: 90%;
-    padding: 40px;
-    margin: 30px auto;
-}
-.aboutplants p
-{
-    line-height: 1.9;
-    font-size: 16px;
-    font-family: cursive;
-    text-align: justify;
+h3 {
+  margin-bottom: 0.5rem;
+  color: #004c97;
 }
 
-.plantCards
-{
-    width: 100%;
-    background-color: green;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    
-    padding: 20px;
-    
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 1rem;
+  background: #eee;
+  font-size: 0.9rem;
 }
 
-.plantCards .plantCard
-{
-    width: 210px;
-    height: 270px;
-    background-color: whitesmoke;
-    border: 4px greenyellow;
-    box-shadow: 3px 3px 4px rgba(0,0,0,0.4);
-    margin: 10px;
-}
-
-.plantCards .plantCard img
-{
-    width: 100%;
-    height: 35vh;
-    padding: 5px;
-}
-.plantCards .plantCard p
-{
-    text-align: center;
-    font-size: 20px;
-    font-family: monospace;
-    margin-top: 20px;
-   
-}
-
-.img-Grass
-{
-    background-color: #78ca89;
-    overflow: auto;
-    white-space: nowrap;
-    padding: 10px;
-
-}
-.img-Grass img
-{
-    width: 300px;
-    height: 250px;
-    padding: 5px;
-    border: 5px green double;
+/* Accessibility */
+:focus {
+  outline: 3px solid #ffb400;
 }
