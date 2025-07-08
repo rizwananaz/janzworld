@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Practice Tasks</title>
+  <style>
+    footer {
+      background-color: gray;
+      text-align: center;
+      padding: 10px;
+    }
+    #menu {
+      width: 300px;
+      height: 150px;
+      background-color: green;
+      background-image: url('https://www.w3schools.com/w3images/lights.jpg');
+      background-size: cover;
+      background-position: center;
+      border: 2px solid #333;
+      margin-bottom: 20px;
+    }
+    #hoverBox {
+      width: 100px;
+      height: 100px;
+      background: gray;
+      margin-bottom: 20px;
+    }
+    nav a {
+      margin: 10px;
+      text-decoration: none;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Task 1: Article & Footer -->
+  <h2>1. Article and Footer</h2>
+  <article>
+    <p>This is the article section.</p>
+  </article>
+  <footer>
+    Footer content here
+  </footer>
+
+  <!-- Task 2: Even or Odd -->
+  <h2>2. Even or Odd Checker</h2>
+  <script>
+    function isEven(num) {
+      if (num % 2 === 0) {
+        console.log("Even");
+        return true;
+      } else {
+        console.log("Odd");
+        return false;
+      }
+    }
+    isEven(5);  // Odd
+    isEven(10); // Even
+  </script>
+
+  <!-- Task 3a: Greeting Function -->
+  <h2>3. Greeting Function</h2>
+  <script>
+    function greet() {
+      console.log("Hi, how are you?");
+    }
+    greet();
+
+    function greetWithName(name) {
+      if (name) {
+        console.log("Hi " + name + ", how are you?");
+      } else {
+        console.log("Hi there, please enter your name!");
+      }
+    }
+    greetWithName("Ali");
+    greetWithName("");
+  </script>
+
+  <!-- Task 4: Styled Div -->
+  <h2>4. Styled Div with Image</h2>
+  <div id="menu"></div>
+
+  <!-- Task 5: Divisibility -->
+  <h2>5. Divisibility Function</h2>
+  <script>
+    function isDivisible(num) {
+      return num % 2 === 0 && num % 4 === 0;
+    }
+    console.log("8 is divisible by 2 and 4:", isDivisible(8)); // true
+    console.log("10 is divisible by 2 and 4:", isDivisible(10)); // false
+  </script>
+
+  <!-- Task 6: Button Click to Display Text -->
+  <h2>6. Button Click Display</h2>
+  <button onclick="document.getElementById('display').innerHTML = 'Button Clicked!'">Click Me</button>
+  <p id="display"></p>
+
+  <!-- Task 7: Mouse Hover Change Background -->
+  <h2>7. Hover to Change Background</h2>
+  <div id="hoverBox"></div>
+  <script>
+    document.getElementById('hoverBox').onmouseover = function() {
+      this.style.backgroundColor = 'yellow';
+    };
+  </script>
+
+  <!-- Task 8: Navigation Bar -->
+  <h2>8. Navigation Bar</h2>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <!-- Task 9: Add Two Numbers -->
+  <h2>9. Add Two Numbers</h2>
+  <script>
+    function addNumbers(a, b) {
+      return a + b;
+    }
+    console.log("5 + 3 =", addNumbers(5, 3)); // 8
+  </script>
+
+  <!-- Task 10: Change Background Color -->
+  <h2>10. Change Background Color</h2>
+  <button onclick="document.body.style.backgroundColor = 'lightgreen'">Change Background</button>
+
+</body>
+</html>
