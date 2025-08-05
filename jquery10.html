@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Keypress Counter</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <h2>Type in the box below</h2>
+  <input type="text">
+  <p>The Key is Pressed</p><br>
+  count: <span>0</span>
+  <!--A counter showing how many keys have been pressed (initially 0).-->
+
+  <script>
+    $(document).ready(function(){
+      var i = 0;
+      $('input[type="text"]').keypress(function(){
+        $("span").text(i += 1); // Increase and update count in the <span>
+        $("p").show().fadeOut();// Show the paragraph, then fade it out smoothly
+      });
+    });
+  </script>
+
+</body>
+</html>

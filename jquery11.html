@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Live Typing</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <h2>Type in the box below</h2>
+  <input type="text">
+  <p id="output">You typed: </p>
+  count: <span>0</span>
+
+  <script>
+    $(document).ready(function(){
+      $('input[type="text"]').on('input', function(){
+        let value = $(this).val();// Get current input value
+        $("#output").text("You typed: " + value); // Update paragraph text with input
+        $("span").text(value.length);// Update count with input length
+      });
+    });
+  </script>
+
+</body>
+</html>
